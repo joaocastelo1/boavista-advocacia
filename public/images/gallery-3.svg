@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0D0D0D"/>
+      <stop offset="1" stop-color="#131313"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#E9CE6E"/>
+      <stop offset="1" stop-color="#977A1F"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.6">
+      <stop offset="0" stop-color="#D4AF37" stop-opacity="0.3"/>
+      <stop offset="1" stop-color="#D4AF37" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="900" fill="url(#bg)"/>
+  <rect width="1200" height="900" fill="url(#glow)"/>
+
+  <g opacity="0.5">
+    <line x1="0" y1="300" x2="1200" y2="200" stroke="#D4AF37" stroke-opacity="0.1" stroke-width="1"/>
+    <line x1="0" y1="520" x2="1200" y2="640" stroke="#D4AF37" stroke-opacity="0.08" stroke-width="1"/>
+  </g>
+
+  <rect x="600" y="120" width="120" height="60" rx="6" fill="url(#gold)"/>
+  <rect x="560" y="180" width="200" height="20" rx="5" fill="url(#gold)"/>
+  <circle cx="660" cy="200" r="26" fill="url(#gold)"/>
+
+  <line x1="300" y1="230" x2="1020" y2="230" stroke="url(#gold)" stroke-width="12" stroke-linecap="round"/>
+
+  <line x1="360" y1="230" x2="360" y2="430" stroke="url(#gold)" stroke-width="7"/>
+  <line x1="960" y1="230" x2="960" y2="430" stroke="url(#gold)" stroke-width="7"/>
+
+  <path d="M 150 430 C 200 350 270 330 360 330 C 450 330 520 360 570 430 Z" fill="url(#gold)"/>
+  <path d="M 630 430 C 680 360 750 330 840 330 C 930 330 1000 350 1050 430 Z" fill="url(#gold)"/>
+
+  <path d="M 250 330 C 290 300 340 290 390 300" stroke="url(#gold)" stroke-width="10" fill="none" stroke-linecap="round"/>
+  <path d="M 730 300 C 780 290 830 300 870 330" stroke="url(#gold)" stroke-width="10" fill="none" stroke-linecap="round"/>
+
+  <path d="M 360 430 L 360 720" stroke="url(#gold)" stroke-width="14"/>
+  <path d="M 960 430 L 960 720" stroke="url(#gold)" stroke-width="14"/>
+  <path d="M 600 250 L 600 720" stroke="#5A5548" stroke-width="18"/>
+
+  <rect x="150" y="720" width="420" height="34" rx="8" fill="url(#gold)"/>
+  <rect x="630" y="720" width="420" height="34" rx="8" fill="url(#gold)"/>
+  <rect x="400" y="754" width="400" height="46" rx="10" fill="url(#gold)"/>
+  <rect x="200" y="800" width="800" height="26" rx="8" fill="url(#gold)"/>
+
+  <circle cx="310" cy="440" r="40" fill="none" stroke="#E9CE6E" stroke-opacity="0.35" stroke-width="3"/>
+  <circle cx="890" cy="440" r="40" fill="none" stroke="#E9CE6E" stroke-opacity="0.35" stroke-width="3"/>
+</svg>

@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 800">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0D0D0D"/>
+      <stop offset="0.6" stop-color="#161616"/>
+      <stop offset="1" stop-color="#1C1C1C"/>
+    </linearGradient>
+    <linearGradient id="skin" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#EDEBE4"/>
+      <stop offset="0.6" stop-color="#C9C6BD"/>
+      <stop offset="1" stop-color="#9A978E"/>
+    </linearGradient>
+    <linearGradient id="suit" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1E1E1E"/>
+      <stop offset="1" stop-color="#121212"/>
+    </linearGradient>
+    <radialGradient id="rim" cx="0.18" cy="0.2" r="0.9">
+      <stop offset="0" stop-color="#D4AF37" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#D4AF37" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="640" height="800" fill="url(#bg)"/>
+  <rect width="640" height="800" fill="url(#rim)"/>
+
+  <!-- gold rings -->
+  <circle cx="560" cy="130" r="92" fill="none" stroke="#D4AF37" stroke-opacity="0.28" stroke-width="1.5"/>
+  <circle cx="560" cy="130" r="120" fill="none" stroke="#D4AF37" stroke-opacity="0.14" stroke-width="1"/>
+  <line x1="60" y1="700" x2="140" y2="700" stroke="#D4AF37" stroke-opacity="0.4" stroke-width="1.5"/>
+  <line x1="60" y1="716" x2="120" y2="716" stroke="#D4AF37" stroke-opacity="0.2" stroke-width="1"/>
+
+  <!-- shoulders / suit -->
+  <path d="M 0 800 C 40 640 130 585 210 578 C 260 573 300 576 320 585 C 340 576 380 573 430 578 C 510 585 600 640 640 800 Z" fill="url(#suit)"/>
+  <path d="M 0 800 C 40 660 130 610 210 603 C 260 598 300 601 320 610 L 320 800 Z" fill="#181818"/>
+  <path d="M 640 800 C 600 660 510 610 430 603 C 380 598 340 601 320 610 L 320 800 Z" fill="#181818"/>
+
+  <!-- shirt + tie -->
+  <path d="M 286 582 L 320 690 L 354 582 Z" fill="#E6E4DE"/>
+  <path d="M 314 586 L 320 700 L 326 586 Z" fill="url(#gold)"/>
+
+  <!-- neck -->
+  <rect x="300" y="492" width="40" height="94" fill="url(#skin)"/>
+
+  <!-- head -->
+  <path d="M 232 320
+    C 232 250 268 220 320 220
+    C 372 220 408 250 408 320
+    C 408 386 382 420 320 420
+    C 258 420 232 386 232 320 Z"
+    fill="url(#skin)"/>
+
+  <!-- hair -->
+  <path d="M 230 316
+    C 228 244 270 214 322 214
+    C 376 214 412 246 410 320
+    C 405 272 370 250 322 250
+    C 274 250 238 272 230 316 Z"
+    fill="#2B2B2B"/>
+
+  <!-- jaw shadow / features -->
+  <path d="M 300 348 C 308 354 332 354 340 348" stroke="#8B887E" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.7"/>
+  <circle cx="296" cy="306" r="4" fill="#6E6B62"/>
+  <circle cx="344" cy="306" r="4" fill="#6E6B62"/>
+  <path d="M 316 330 C 318 334 322 334 324 330" stroke="#8B887E" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.6"/>
+
+  <!-- ears -->
+  <path d="M 232 300 C 222 308 222 330 234 338" stroke="url(#skin)" stroke-width="12" fill="none" stroke-linecap="round"/>
+  <path d="M 408 300 C 418 308 418 330 406 338" stroke="url(#skin)" stroke-width="12" fill="none" stroke-linecap="round"/>
+
+  <!-- collar -->
+  <path d="M 286 582 L 268 610 L 288 606 Z" fill="#EDEBE4"/>
+  <path d="M 354 582 L 372 610 L 352 606 Z" fill="#EDEBE4"/>
+</svg>
