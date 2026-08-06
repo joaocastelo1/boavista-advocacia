@@ -89,7 +89,7 @@ export function Hero() {
                   width={515}
                   height={288}
                   priority
-                  className="h-20 w-auto object-contain drop-shadow-[0_4px_20px_rgba(0,0,0,0.55)] md:h-24"
+                  className="h-24 w-auto object-contain drop-shadow-[0_4px_20px_rgba(0,0,0,0.55)] md:h-32"
                 />
                 <div>
                   <p className="font-display text-xl font-semibold tracking-wide text-ivory-100 md:text-2xl">
