@@ -113,7 +113,7 @@ export function Hero() {
           <TextReveal
             as="h1"
             delay={0.15}
-            className="mt-6 font-display text-[clamp(2rem,5.2vw,4rem)] leading-[1.12] font-semibold text-ivory-100 text-shadow-hero"
+            className="mt-6 font-display text-[clamp(1.85rem,4.8vw,3.7rem)] leading-[1.12] font-semibold text-ivory-100 text-shadow-hero"
             text="Guiado por princípios de zelo, excelência e integridade, o Boavista Advocacia preza pela satisfação máxima de seus clientes."
           />
 
