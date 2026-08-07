@@ -54,7 +54,7 @@ export function PhotoCarousel() {
   }, []);
 
   return (
-    <div className="relative mx-auto w-full max-w-sm">
+    <div className="relative mx-auto w-full max-w-[420px] sm:max-w-[460px] lg:max-w-[520px] xl:max-w-[560px]">
       <div
         className="relative overflow-hidden rounded-2xl border border-gold-400/25 bg-ink-900 shadow-card"
         onMouseEnter={() => setPaused(true)}

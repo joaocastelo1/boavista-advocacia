@@ -78,11 +78,11 @@ export function Hero() {
         <div className="absolute -right-24 bottom-1/4 size-[420px] rounded-full bg-blue-600/10 blur-[140px]" />
       </div>
 
-      <div className="container-max relative z-10 flex flex-1 flex-col justify-center pt-32 pb-28 md:pt-40">
-        <div className="grid items-center gap-14 lg:grid-cols-[1.08fr_0.92fr] lg:gap-10">
+      <div className="container-max relative z-10 flex flex-1 flex-col justify-center pt-28 pb-24 md:pt-36 md:pb-32">
+        <div className="grid items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
           <div>
             <Reveal blur>
-              <div className="mb-9 flex items-center gap-4">
+              <div className="mb-10 flex items-center gap-5">
                 <Image
                   src="/images/logo-1.png"
                   alt="Boavista Advocacia"
@@ -112,12 +112,12 @@ export function Hero() {
             <TextReveal
               as="h1"
               delay={0.15}
-              className="mt-6 font-display text-[clamp(2.05rem,5.2vw,4.05rem)] leading-[1.08] font-semibold text-ivory-100 text-shadow-hero"
+              className="mt-6 font-display text-[clamp(2.2rem,5.4vw,4.2rem)] leading-[1.1] font-semibold text-ivory-100 text-shadow-hero"
               text="Guiado por princípios de zelo, excelência e integridade, o Boavista Advocacia preza pela satisfação máxima de seus clientes."
             />
 
             <Reveal delay={0.35}>
-              <p className="mt-7 max-w-xl text-lg leading-relaxed text-ivory-100/70 md:text-xl">
+              <p className="mt-6 max-w-xl text-lg leading-relaxed text-ivory-100/70 md:text-xl">
                 Atendimento jurídico especializado nas áreas Cível, Previdenciária, do Consumidor e
                 Imobiliária, com estratégia, discrição e compromisso absoluto com o melhor resultado
                 para você — em todo o Brasil.
