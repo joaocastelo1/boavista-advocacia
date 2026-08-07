@@ -151,7 +151,7 @@ export function Footer() {
         <p>
           {siteConfig.lawyer.oab} · Advogado Responsável {siteConfig.lawyer.name}
         </p>
-        <p>
+        <p className="flex flex-wrap items-center justify-center gap-x-1.5 gap-y-1 text-center md:justify-start md:text-left">
           Desenvolvido por
           <a
             href={siteConfig.developer.whatsappUrl}
@@ -168,7 +168,8 @@ export function Footer() {
             />
             {siteConfig.developer.name}
           </a>
-          · WhatsApp{" "}
+          <span aria-hidden="true">·</span>
+          <span>WhatsApp</span>
           <a
             href={siteConfig.developer.whatsappUrl}
             target="_blank"
