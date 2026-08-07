@@ -18,7 +18,7 @@ export function BrazilMap() {
     <div
       className="relative mx-auto w-full max-w-[520px]"
       role="img"
-      aria-label="Mapa do Brasil com destaque para atendimento em todas as regiões"
+      aria-label="Mapa do Brasil com destaque para atendimento presencial em Codó, no Maranhão, e online em todo o país"
     >
       <div
         aria-hidden="true"

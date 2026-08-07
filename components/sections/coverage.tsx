@@ -1,4 +1,4 @@
-import { Globe2, Laptop2, MessageCircle, ShieldCheck } from "lucide-react";
+import { Laptop2, MapPin, MessageCircle, ShieldCheck } from "lucide-react";
 
 import { Reveal } from "@/components/animations/reveal";
 import { Parallax } from "@/components/animations/parallax";
@@ -9,22 +9,22 @@ import { siteConfig } from "@/lib/site";
 
 const coveragePoints = [
   {
-    icon: Globe2,
-    title: "27 estados brasileiros",
+    icon: MapPin,
+    title: "Presencial em Codó – MA",
     description:
-      "Atendimento jurídico em todo o território nacional, de Roraima ao Rio Grande do Sul.",
+      "Atendimento no escritório, na Avenida Duque de Caxias, 282 A, em Codó e em toda a região do Maranhão.",
   },
   {
     icon: Laptop2,
     title: "Atendimento 100% online",
     description:
-      "Consultas por videoconferência, documentos digitais e acompanhamento pelo WhatsApp.",
+      "Consultas por videoconferência, documentos digitais e acompanhamento pelo WhatsApp para clientes de qualquer lugar do Brasil.",
   },
   {
     icon: ShieldCheck,
     title: "Segurança jurídica total",
     description:
-      "Petições, prazos e atos processuais conduzidos com rigor e conformidade em todo o país.",
+      "Petições, prazos e atos processuais conduzidos com rigor, ética e conformidade.",
   },
 ];
 
@@ -40,9 +40,9 @@ export function Coverage() {
         <div>
           <SectionHeading
             align="left"
-            eyebrow="Cobertura Nacional"
-            title="Atendemos em todo o Brasil, de norte a sul"
-            description="Sediado em Codó – MA, o Boavista Advocacia está preparado para atuar em qualquer estado, de forma totalmente digital e segura."
+            eyebrow="Onde Atendemos"
+            title="Atendimento presencial em Codó – MA e online em todo o Brasil"
+            description="O Boavista Advocacia atende presencialmente em Codó – MA e região, e online — por videoconferência, WhatsApp e e-mail — para clientes de qualquer lugar do país."
           />
 
           <div className="mt-10 space-y-6">
