@@ -9,7 +9,7 @@ import { Reveal } from "@/components/animations/reveal";
 import { TextReveal } from "@/components/animations/text-reveal";
 import { Magnetic } from "@/components/animations/magnetic";
 import { Button } from "@/components/ui/button";
-import { LawyerPhoto } from "./hero/lawyer-photo";
+import { HeroEbook } from "./hero/hero-ebook";
 import { siteConfig } from "@/lib/site";
 
 export function Hero() {
@@ -92,10 +92,10 @@ export function Hero() {
                   className="h-24 w-auto object-contain drop-shadow-[0_4px_20px_rgba(0,0,0,0.55)] md:h-32"
                 />
                 <div>
-                  <p className="font-display text-xl font-semibold tracking-wide text-ivory-100 md:text-2xl">
+                  <p className="font-display text-[clamp(1.25rem,2.2vw,1.75rem)] font-semibold tracking-wide text-ivory-100">
                     Boavista Advocacia
                   </p>
-                  <p className="mt-1 text-[11px] font-medium tracking-[0.25em] text-gold-400 uppercase md:text-xs">
+                  <p className="mt-1 text-[clamp(0.625rem,1vw,0.75rem)] font-medium tracking-[0.25em] text-gold-400 uppercase">
                     Advocacia em Codó – MA · Atendimento Nacional
                   </p>
                 </div>
@@ -117,7 +117,7 @@ export function Hero() {
             />
 
             <Reveal delay={0.35}>
-              <p className="mt-6 max-w-xl text-lg leading-relaxed text-ivory-100/70 md:text-xl">
+              <p className="mt-6 max-w-xl text-[clamp(1.05rem,1.7vw,1.35rem)] leading-relaxed text-ivory-100/70">
                 Atendimento jurídico especializado nas áreas Cível, Previdenciária, do Consumidor e
                 Imobiliária, com estratégia, discrição e compromisso absoluto com o melhor resultado
                 para você — em todo o Brasil.
@@ -147,22 +147,22 @@ export function Hero() {
               <ul className="mt-12 flex flex-wrap items-center gap-x-10 gap-y-4">
                 <li className="flex items-center gap-2.5">
                   <Award className="size-5 text-gold-400" aria-hidden="true" />
-                  <span className="text-sm text-ivory-100/70">Atendimento personalizado</span>
+                  <span className="text-[clamp(0.875rem,1.1vw,1rem)] text-ivory-100/70">Atendimento personalizado</span>
                 </li>
                 <li className="flex items-center gap-2.5">
                   <ShieldCheck className="size-5 text-gold-400" aria-hidden="true" />
-                  <span className="text-sm text-ivory-100/70">Ética e sigilo garantidos</span>
+                  <span className="text-[clamp(0.875rem,1.1vw,1rem)] text-ivory-100/70">Ética e sigilo garantidos</span>
                 </li>
                 <li className="flex items-center gap-2.5">
                   <Globe2 className="size-5 text-gold-400" aria-hidden="true" />
-                  <span className="text-sm text-ivory-100/70">Atendimento em todo o Brasil</span>
+                  <span className="text-[clamp(0.875rem,1.1vw,1rem)] text-ivory-100/70">Atendimento em todo o Brasil</span>
                 </li>
               </ul>
             </Reveal>
           </div>
 
           <Reveal direction="right" delay={0.3}>
-            <LawyerPhoto />
+            <HeroEbook />
           </Reveal>
         </div>
       </div>
