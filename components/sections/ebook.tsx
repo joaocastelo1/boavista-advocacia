@@ -1,9 +1,9 @@
-import Image from "next/image";
 import { BookOpen, Check, FileText, ShoppingCart } from "lucide-react";
 
 import { Reveal } from "@/components/animations/reveal";
 import { Magnetic } from "@/components/animations/magnetic";
 import { Button } from "@/components/ui/button";
+import { EbookCover } from "./ebook/ebook-cover";
 import { siteConfig } from "@/lib/site";
 
 export function Ebook() {
@@ -30,22 +30,7 @@ export function Ebook() {
 
             <div className="relative grid gap-10 p-8 md:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] md:items-center md:p-14 lg:p-16">
               <Reveal direction="right">
-                <div className="relative mx-auto w-fit">
-                  <div
-                    aria-hidden="true"
-                    className="absolute -inset-4 -rotate-6 rounded-2xl bg-gold-400/15"
-                  />
-                  <div className="relative overflow-hidden rounded-2xl shadow-[0_20px_60px_-20px_rgba(0,0,0,0.6)]">
-                    <Image
-                      src={ebook.cover}
-                      alt={`Capa do e-book ${ebook.title}`}
-                      width={853}
-                      height={1280}
-                      priority
-                      className="h-auto w-64 object-cover sm:w-72"
-                    />
-                  </div>
-                </div>
+                <EbookCover />
               </Reveal>
 
               <div>

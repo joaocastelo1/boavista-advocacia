@@ -86,7 +86,7 @@ export const siteConfig = {
     oab: "OAB/MA 26531",
     email: "bruno@boavistaadvocacia.com.br",
     phone: "(98) 98258-3769",
-    photo: "/images/advogado.png",
+    photo: "/images/adv principal.png",
     specialities: [
       "Direito Civil",
       "Direito Previdenciário",

@@ -9,7 +9,7 @@ import { Reveal } from "@/components/animations/reveal";
 import { TextReveal } from "@/components/animations/text-reveal";
 import { Magnetic } from "@/components/animations/magnetic";
 import { Button } from "@/components/ui/button";
-import { PhotoCarousel } from "./hero/photo-carousel";
+import { LawyerPhoto } from "./hero/lawyer-photo";
 import { siteConfig } from "@/lib/site";
 
 export function Hero() {
@@ -162,7 +162,7 @@ export function Hero() {
           </div>
 
           <Reveal direction="right" delay={0.3}>
-            <PhotoCarousel />
+            <LawyerPhoto />
           </Reveal>
         </div>
       </div>
