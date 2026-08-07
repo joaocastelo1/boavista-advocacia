@@ -4,7 +4,6 @@ import { About } from "@/components/sections/about";
 import { Profile } from "@/components/sections/profile";
 import { Areas } from "@/components/sections/areas";
 import { Diferenciais } from "@/components/sections/diferenciais";
-import { Coverage } from "@/components/sections/coverage";
 import { HowItWorks } from "@/components/sections/how-it-works";
 import { Services } from "@/components/sections/services";
 import { Testimonials } from "@/components/sections/testimonials";
@@ -23,7 +22,6 @@ export default function Home() {
       <Profile />
       <Areas />
       <Diferenciais />
-      <Coverage />
       <HowItWorks />
       <Services />
       <Testimonials />

@@ -26,7 +26,7 @@ Copie `.env.example` para `.env.local` e preencha os valores (URL, WhatsApp, e-m
 | Variável | Descrição |
 | --- | --- |
 | `NEXT_PUBLIC_SITE_URL` | URL pública do site (usada em sitemap, robots e Open Graph) |
-| `NEXT_PUBLIC_WHATSAPP` | WhatsApp do escritório em formato internacional, só dígitos (ex.: `5598982583769`) |
+| `NEXT_PUBLIC_WHATSAPP` | WhatsApp do escritório em formato internacional, só dígitos (ex.: `5599982597369`) |
 | `NEXT_PUBLIC_CONTACT_EMAIL` | E-mail institucional exibido no site |
 | `RESEND_API_KEY` / `CONTACT_FROM_EMAIL` | Envio de mensagens via Resend (opcional) |
 | `SMTP_HOST` / `SMTP_PORT` / `SMTP_SECURE` / `SMTP_USER` / `SMTP_PASS` | Envio de mensagens via SMTP (opcional) |

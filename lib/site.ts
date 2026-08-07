@@ -25,21 +25,21 @@ export const siteConfig = {
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.boavistaadvocacia.com.br",
 
   phone: {
-    display: "(98) 98258-3769",
-    displayShort: "(98) 98258-3769",
-    raw: process.env.NEXT_PUBLIC_WHATSAPP ?? "5598982583769",
+    display: "(99) 98259-7369",
+    displayShort: "(99) 98259-7369",
+    raw: process.env.NEXT_PUBLIC_WHATSAPP ?? "5599982597369",
   },
 
   email: process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "bruno@boavistaadvocacia.com.br",
 
   address: {
-    street: "Avenida Duque de Caxias, 282 A",
+    street: "Avenida Duque de Caxias, 2620 A",
     district: "Bairro São Sebastião",
     city: "Codó",
     state: "MA",
     zip: "65400-000",
-    full: "Avenida Duque de Caxias, 282 A – Bairro São Sebastião, Codó – MA",
-    mapsQuery: "Avenida Duque de Caxias, 282, Codó - MA",
+    full: "Avenida Duque de Caxias, 2620 A – Bairro São Sebastião, Codó – MA",
+    mapsQuery: "Avenida Duque de Caxias, 2620 A, Codó - MA",
   },
 
   social: {
@@ -74,7 +74,7 @@ export const siteConfig = {
     price: "R$ 14,99",
     format: "E-book em PDF",
     pages: "Formato digital",
-    buyUrl: `https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP ?? "5598982583769"}?text=${encodeURIComponent(
+    buyUrl: `https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP ?? "5599982597369"}?text=${encodeURIComponent(
       `Olá! Quero adquirir o e-book "As Origens dos Princípios Jurídicos do Ocidente" (R$ 14,99).`
     )}`,
   },
@@ -85,7 +85,7 @@ export const siteConfig = {
     role: "Advogado",
     oab: "OAB/MA 26531",
     email: "bruno@boavistaadvocacia.com.br",
-    phone: "(98) 98258-3769",
+    phone: "(99) 98259-7369",
     photo: "/images/adv principal.png",
     specialities: [
       "Direito Civil",

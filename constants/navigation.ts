@@ -15,7 +15,6 @@ export const sectionIds = {
   perfil: "perfil",
   areas: "areas",
   diferenciais: "diferenciais",
-  cobertura: "cobertura",
   comoFunciona: "como-funciona",
   servicos: "servicos",
   depoimentos: "depoimentos",
