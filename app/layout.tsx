@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import { headers } from "next/headers";
 import { Toaster } from "sonner";
 
 import { ThemeProvider } from "@/components/providers/theme-provider";
@@ -14,7 +15,13 @@ import { buildMetadata } from "@/lib/seo";
 import { siteConfig } from "@/lib/site";
 import "./globals.css";
 
-export const metadata: Metadata = buildMetadata();
+export async function generateMetadata(): Promise<Metadata> {
+  const headersList = await headers();
+  const host = headersList.get("x-forwarded-host") ?? headersList.get("host");
+  const proto = headersList.get("x-forwarded-proto") ?? "https";
+  const baseUrl = host ? `${proto}://${host}` : siteConfig.url;
+  return buildMetadata({ baseUrl });
+}
 
 export const viewport: Viewport = {
   width: "device-width",
