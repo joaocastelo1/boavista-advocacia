@@ -43,9 +43,9 @@ export const siteConfig = {
   },
 
   social: {
-    instagram: "https://instagram.com/boavistaadvocacia",
-    linkedin: "https://linkedin.com/company/boavistaadvocacia",
-    facebook: "https://facebook.com/boavistaadvocacia",
+    instagram: "https://www.instagram.com/boavista_bruno",
+    facebook: "https://www.facebook.com/bruno.boavista.7",
+    youtube: "https://www.youtube.com/@brunoboavista5252",
   },
 
   developer: {

@@ -2,7 +2,7 @@ import Image from "next/image";
 import {
   Facebook,
   Instagram,
-  Linkedin,
+  Youtube,
   Mail,
   MapPin,
   Phone,
@@ -17,7 +17,7 @@ import { siteConfig } from "@/lib/site";
 
 const socialLinks = [
   { label: "Instagram", href: siteConfig.social.instagram, icon: Instagram },
-  { label: "LinkedIn", href: siteConfig.social.linkedin, icon: Linkedin },
+  { label: "YouTube", href: siteConfig.social.youtube, icon: Youtube },
   { label: "Facebook", href: siteConfig.social.facebook, icon: Facebook },
 ];
 

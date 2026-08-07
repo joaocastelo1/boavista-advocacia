@@ -34,7 +34,7 @@ export function JsonLd() {
         },
         sameAs: [
           siteConfig.social.instagram,
-          siteConfig.social.linkedin,
+          siteConfig.social.youtube,
           siteConfig.social.facebook,
         ],
         knowsAbout: siteConfig.lawyer.specialities,
