@@ -9,6 +9,7 @@ import { Reveal } from "@/components/animations/reveal";
 import { TextReveal } from "@/components/animations/text-reveal";
 import { Magnetic } from "@/components/animations/magnetic";
 import { Button } from "@/components/ui/button";
+import { HeroCarousel } from "./hero/hero-carousel";
 import { siteConfig } from "@/lib/site";
 
 export function Hero() {
@@ -77,88 +78,97 @@ export function Hero() {
         <div className="absolute -right-24 bottom-1/4 size-[420px] rounded-full bg-blue-600/10 blur-[140px]" />
       </div>
 
-      <div className="container-max relative z-10 flex flex-1 flex-col justify-center pt-28 pb-24 md:pt-36 md:pb-32">
-        <div className="mx-auto flex w-full max-w-4xl flex-col items-center text-center">
-          <Reveal blur>
-            <div className="relative mb-8 flex flex-col items-center">
-              <div
-                aria-hidden="true"
-                className="pointer-events-none absolute top-1/2 left-1/2 -z-10 size-72 -translate-x-1/2 -translate-y-1/2 rounded-full bg-gold-400/25 blur-[100px] md:size-96"
-              />
-              <Image
-                src="/images/logo-1.png"
-                alt="Boavista Advocacia"
-                width={515}
-                height={288}
-                priority
-                className="h-32 w-auto object-contain drop-shadow-[0_0_35px_rgba(212,175,55,0.45)] md:h-44"
-              />
-              <p className="mt-4 font-display text-[clamp(1.5rem,3vw,2.5rem)] font-semibold tracking-wide text-ivory-100">
-                Boavista Advocacia
+      <div className="container-max relative z-10 flex flex-1 flex-col justify-center pt-28 pb-24 md:pt-32 md:pb-28">
+        <div className="grid items-center gap-14 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
+          <div>
+            <Reveal blur>
+              <div className="mb-8 flex items-center gap-4">
+                <div className="relative shrink-0">
+                  <div
+                    aria-hidden="true"
+                    className="pointer-events-none absolute -inset-5 -z-10 rounded-full bg-gold-400/25 blur-3xl"
+                  />
+                  <Image
+                    src="/images/logo-1.png"
+                    alt="Boavista Advocacia"
+                    width={515}
+                    height={288}
+                    priority
+                    className="h-24 w-auto object-contain drop-shadow-[0_0_30px_rgba(212,175,55,0.45)] md:h-32"
+                  />
+                </div>
+                <div>
+                  <p className="font-display text-[clamp(1.25rem,2vw,1.6rem)] font-semibold tracking-wide text-ivory-100">
+                    Boavista Advocacia
+                  </p>
+                  <p className="mt-1 text-[clamp(0.625rem,0.9vw,0.75rem)] font-medium tracking-[0.25em] text-gold-400 uppercase">
+                    Advocacia em Codó – MA · Atendimento Nacional
+                  </p>
+                </div>
+              </div>
+            </Reveal>
+
+            <Reveal blur>
+              <p className="eyebrow flex items-center gap-3 text-gold-400">
+                <span className="inline-block h-px w-10 bg-gold-400/60" aria-hidden="true" />
+                Escritório de Advocacia · {siteConfig.lawyer.oab}
               </p>
-              <p className="mt-1.5 text-[clamp(0.625rem,1vw,0.8rem)] font-medium tracking-[0.3em] text-gold-400 uppercase">
-                Advocacia em Codó – MA · Atendimento Nacional
+            </Reveal>
+
+            <TextReveal
+              as="h1"
+              delay={0.15}
+              className="mt-6 font-display text-[clamp(2.1rem,4.6vw,3.6rem)] leading-[1.12] font-semibold text-ivory-100 text-left text-shadow-hero"
+              text="Guiado por princípios de zelo, excelência e integridade, o Boavista Advocacia preza pela satisfação máxima de seus clientes."
+            />
+
+            <Reveal delay={0.35}>
+              <p className="mt-6 max-w-xl text-[clamp(1.05rem,1.6vw,1.3rem)] leading-relaxed text-ivory-100/70 text-left">
+                Atendimento jurídico especializado nas áreas Cível, Previdenciária, do Consumidor e
+                Imobiliária, com estratégia, discrição e compromisso absoluto com o melhor resultado
+                para você — em todo o Brasil.
               </p>
-            </div>
-          </Reveal>
+            </Reveal>
 
-          <Reveal blur>
-            <p className="eyebrow flex items-center justify-center gap-3 text-gold-400">
-              <span className="inline-block h-px w-10 bg-gold-400/60" aria-hidden="true" />
-              Escritório de Advocacia · {siteConfig.lawyer.oab}
-              <span className="inline-block h-px w-10 bg-gold-400/60" aria-hidden="true" />
-            </p>
-          </Reveal>
-
-          <TextReveal
-            as="h1"
-            delay={0.15}
-            className="mt-6 font-display text-[clamp(2rem,5.2vw,4rem)] leading-[1.12] font-semibold text-ivory-100 text-shadow-hero"
-            text="Guiado por princípios de zelo, excelência e integridade, o Boavista Advocacia preza pela satisfação máxima de seus clientes."
-          />
-
-          <Reveal delay={0.35}>
-            <p className="mt-6 max-w-2xl text-[clamp(1.05rem,1.6vw,1.3rem)] leading-relaxed text-ivory-100/70">
-              Atendimento jurídico especializado nas áreas Cível, Previdenciária, do Consumidor e
-              Imobiliária, com estratégia, discrição e compromisso absoluto com o melhor resultado
-              para você — em todo o Brasil.
-            </p>
-          </Reveal>
-
-          <Reveal delay={0.5}>
-            <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
-              <Magnetic strength={0.25}>
-                <Button asChild variant="whatsapp" size="lg">
-                  <a href={siteConfig.whatsappUrl} target="_blank" rel="noopener noreferrer">
-                    <MessageCircle />
-                    Fale Conosco
+            <Reveal delay={0.5}>
+              <div className="mt-10 flex flex-wrap items-center gap-4">
+                <Magnetic strength={0.25}>
+                  <Button asChild variant="whatsapp" size="lg">
+                    <a href={siteConfig.whatsappUrl} target="_blank" rel="noopener noreferrer">
+                      <MessageCircle />
+                      Fale Conosco
+                    </a>
+                  </Button>
+                </Magnetic>
+                <Button asChild variant="goldOutline" size="lg">
+                  <a href="#sobre">
+                    <CalendarCheck />
+                    Saiba Mais
                   </a>
                 </Button>
-              </Magnetic>
-              <Button asChild variant="goldOutline" size="lg">
-                <a href="#sobre">
-                  <CalendarCheck />
-                  Saiba Mais
-                </a>
-              </Button>
-            </div>
-          </Reveal>
+              </div>
+            </Reveal>
 
-          <Reveal delay={0.65}>
-            <ul className="mt-12 flex flex-wrap items-center justify-center gap-x-10 gap-y-4">
-              <li className="flex items-center gap-2.5">
-                <Award className="size-5 text-gold-400" aria-hidden="true" />
-                <span className="text-[clamp(0.875rem,1.1vw,1rem)] text-ivory-100/70">Atendimento personalizado</span>
-              </li>
-              <li className="flex items-center gap-2.5">
-                <ShieldCheck className="size-5 text-gold-400" aria-hidden="true" />
-                <span className="text-[clamp(0.875rem,1.1vw,1rem)] text-ivory-100/70">Ética e sigilo garantidos</span>
-              </li>
-              <li className="flex items-center gap-2.5">
-                <Globe2 className="size-5 text-gold-400" aria-hidden="true" />
-                <span className="text-[clamp(0.875rem,1.1vw,1rem)] text-ivory-100/70">Atendimento em todo o Brasil</span>
-              </li>
-            </ul>
+            <Reveal delay={0.65}>
+              <ul className="mt-12 flex flex-wrap items-center gap-x-10 gap-y-4">
+                <li className="flex items-center gap-2.5">
+                  <Award className="size-5 text-gold-400" aria-hidden="true" />
+                  <span className="text-[clamp(0.875rem,1.1vw,1rem)] text-ivory-100/70">Atendimento personalizado</span>
+                </li>
+                <li className="flex items-center gap-2.5">
+                  <ShieldCheck className="size-5 text-gold-400" aria-hidden="true" />
+                  <span className="text-[clamp(0.875rem,1.1vw,1rem)] text-ivory-100/70">Ética e sigilo garantidos</span>
+                </li>
+                <li className="flex items-center gap-2.5">
+                  <Globe2 className="size-5 text-gold-400" aria-hidden="true" />
+                  <span className="text-[clamp(0.875rem,1.1vw,1rem)] text-ivory-100/70">Atendimento em todo o Brasil</span>
+                </li>
+              </ul>
+            </Reveal>
+          </div>
+
+          <Reveal direction="right" delay={0.3}>
+            <HeroCarousel />
           </Reveal>
         </div>
       </div>
