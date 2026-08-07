@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
@@ -13,14 +13,25 @@ import { galleryImages } from "@/constants/gallery";
 import { cn } from "@/lib/utils";
 import type { GalleryImage } from "@/types";
 
+function getSlidesToScroll() {
+  if (typeof window === "undefined") return 3;
+  if (window.innerWidth < 768) return 1;
+  if (window.innerWidth < 1024) return 2;
+  return 3;
+}
+
 export function Gallery() {
   const [selected, setSelected] = useState<GalleryImage | null>(null);
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [count, setCount] = useState(0);
 
+  const autoplayRef = useRef(
+    Autoplay({ delay: 4200, stopOnInteraction: false, stopOnMouseEnter: true })
+  );
+
   const [emblaRef, emblaApi] = useEmblaCarousel(
-    { loop: true, align: "center", containScroll: false },
-    [Autoplay({ delay: 4200, stopOnInteraction: false, stopOnMouseEnter: true })]
+    { loop: true, align: "start", containScroll: false, slidesToScroll: getSlidesToScroll() },
+    [autoplayRef.current]
   );
 
   useEffect(() => {
@@ -29,8 +40,13 @@ export function Gallery() {
     const onSelect = () => setSelectedIndex(emblaApi.selectedScrollSnap());
     emblaApi.on("select", onSelect);
     onSelect();
+    const onResize = () => {
+      emblaApi.reInit({ slidesToScroll: getSlidesToScroll() });
+    };
+    window.addEventListener("resize", onResize);
     return () => {
       emblaApi.off("select", onSelect);
+      window.removeEventListener("resize", onResize);
     };
   }, [emblaApi]);
 
