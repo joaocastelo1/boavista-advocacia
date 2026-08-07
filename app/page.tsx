@@ -1,5 +1,4 @@
 import { Hero } from "@/components/sections/hero";
-import { MarqueeBar } from "@/components/sections/marquee-bar";
 import { About } from "@/components/sections/about";
 import { Profile } from "@/components/sections/profile";
 import { Areas } from "@/components/sections/areas";
@@ -17,7 +16,6 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <MarqueeBar />
       <About />
       <Profile />
       <Areas />
