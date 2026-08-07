@@ -43,10 +43,10 @@ export function Footer() {
             className="inline-block transition-opacity duration-300 hover:opacity-85"
           >
             <Image
-              src="/images/logo0.png"
+              src="/images/logo3.png"
               alt="Boavista Advocacia"
-              width={1774}
-              height={887}
+              width={500}
+              height={500}
               className="h-20 w-auto object-contain md:h-24"
             />
           </a>
