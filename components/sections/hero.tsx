@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react";
 import Image from "next/image";
 import gsap from "gsap";
-import { CalendarCheck, MessageCircle, ShieldCheck, Globe2, Award } from "lucide-react";
+import { CalendarCheck, MessageCircle, ShieldCheck, Globe2, Award, Scale } from "lucide-react";
 
 import { Reveal } from "@/components/animations/reveal";
 import { TextReveal } from "@/components/animations/text-reveal";
@@ -85,6 +85,14 @@ export function Hero() {
                 aria-hidden="true"
                 className="pointer-events-none absolute top-1/2 left-1/2 -z-10 size-72 -translate-x-1/2 -translate-y-1/2 rounded-full bg-gold-400/25 blur-[100px] md:size-96"
               />
+              <div
+                aria-hidden="true"
+                className="pointer-events-none absolute top-1/2 left-1/2 -z-10 size-64 -translate-x-1/2 -translate-y-1/2 rounded-full border border-gold-400/20 md:size-[21rem]"
+              />
+              <div
+                aria-hidden="true"
+                className="pointer-events-none absolute top-1/2 left-1/2 -z-10 size-[22rem] -translate-x-1/2 -translate-y-1/2 animate-[spin_45s_linear_infinite] rounded-full border border-dashed border-gold-400/15 md:size-[26rem]"
+              />
               <Image
                 src="/images/logo-1.png"
                 alt="Boavista Advocacia"
@@ -93,27 +101,27 @@ export function Hero() {
                 priority
                 className="h-32 w-auto object-contain drop-shadow-[0_0_35px_rgba(212,175,55,0.45)] md:h-44"
               />
-              <p className="mt-4 font-display text-[clamp(1.5rem,3vw,2.5rem)] font-semibold tracking-wide text-ivory-100">
+              <p className="mt-5 font-display text-[clamp(1.6rem,3.4vw,2.6rem)] font-semibold tracking-wide text-gradient-gold">
                 Boavista Advocacia
               </p>
-              <p className="mt-1.5 text-[clamp(0.625rem,1vw,0.8rem)] font-medium tracking-[0.3em] text-gold-400 uppercase">
+              <p className="mt-1.5 text-[clamp(0.625rem,1vw,0.8rem)] font-medium tracking-[0.3em] text-ivory-100/60 uppercase">
                 Advocacia em Codó – MA · Atendimento Nacional
               </p>
             </div>
           </Reveal>
 
           <Reveal blur>
-            <p className="eyebrow flex items-center justify-center gap-3 text-gold-400">
-              <span className="inline-block h-px w-10 bg-gold-400/60" aria-hidden="true" />
+            <span className="eyebrow inline-flex items-center gap-2.5 rounded-full border border-gold-400/30 bg-gold-400/[0.08] px-5 py-2 text-gold-400">
+              <Scale className="size-4" aria-hidden="true" />
               Escritório de Advocacia · {siteConfig.lawyer.oab}
-              <span className="inline-block h-px w-10 bg-gold-400/60" aria-hidden="true" />
-            </p>
+            </span>
           </Reveal>
 
           <TextReveal
             as="h1"
             delay={0.15}
             className="mt-6 font-display text-[clamp(1.85rem,4.8vw,3.7rem)] leading-[1.12] font-semibold text-ivory-100 text-shadow-hero"
+            highlightWords={["zelo", "excelência", "integridade"]}
             text="Guiado por princípios de zelo, excelência e integridade, o Boavista Advocacia preza pela satisfação máxima de seus clientes."
           />
 
@@ -145,20 +153,25 @@ export function Hero() {
           </Reveal>
 
           <Reveal delay={0.65}>
-            <ul className="mt-12 flex flex-wrap items-center justify-center gap-x-10 gap-y-4">
-              <li className="flex items-center gap-2.5">
-                <Award className="size-5 text-gold-400" aria-hidden="true" />
-                <span className="text-[clamp(0.875rem,1.1vw,1rem)] text-ivory-100/70">Atendimento personalizado</span>
-              </li>
-              <li className="flex items-center gap-2.5">
-                <ShieldCheck className="size-5 text-gold-400" aria-hidden="true" />
-                <span className="text-[clamp(0.875rem,1.1vw,1rem)] text-ivory-100/70">Ética e sigilo garantidos</span>
-              </li>
-              <li className="flex items-center gap-2.5">
-                <Globe2 className="size-5 text-gold-400" aria-hidden="true" />
-                <span className="text-[clamp(0.875rem,1.1vw,1rem)] text-ivory-100/70">Atendimento em todo o Brasil</span>
-              </li>
-            </ul>
+            <div className="mt-12 grid w-full max-w-2xl grid-cols-1 gap-3 sm:grid-cols-3">
+              {[
+                { icon: Award, label: "Atendimento personalizado" },
+                { icon: ShieldCheck, label: "Ética e sigilo garantidos" },
+                { icon: Globe2, label: "Atendimento em todo o Brasil" },
+              ].map(({ icon: Icon, label }) => (
+                <div
+                  key={label}
+                  className="flex items-center justify-center gap-2.5 rounded-xl border border-gold-400/20 bg-ink-900/60 px-4 py-3.5 backdrop-blur"
+                >
+                  <span className="flex size-8 shrink-0 items-center justify-center rounded-full bg-gold-400/10 text-gold-400">
+                    <Icon className="size-4" aria-hidden="true" />
+                  </span>
+                  <span className="text-[clamp(0.8125rem,1vw,0.9375rem)] text-ivory-100/75">
+                    {label}
+                  </span>
+                </div>
+              ))}
+            </div>
           </Reveal>
         </div>
       </div>

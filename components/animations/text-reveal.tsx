@@ -26,9 +26,16 @@ type TextRevealProps = {
   className?: string;
   as?: "span" | "h1" | "h2" | "h3" | "p";
   delay?: number;
+  highlightWords?: string[];
 };
 
-export function TextReveal({ text, className, as: Tag = "span", delay = 0 }: TextRevealProps) {
+export function TextReveal({
+  text,
+  className,
+  as: Tag = "span",
+  delay = 0,
+  highlightWords,
+}: TextRevealProps) {
   const reduceMotion = useReducedMotion();
 
   if (reduceMotion) {
@@ -36,6 +43,7 @@ export function TextReveal({ text, className, as: Tag = "span", delay = 0 }: Tex
   }
 
   const MotionTag = motion.create(Tag);
+  const words = text.split(" ");
 
   return (
     <MotionTag
@@ -47,14 +55,23 @@ export function TextReveal({ text, className, as: Tag = "span", delay = 0 }: Tex
       className={cn(className)}
       aria-label={text}
     >
-      {text.split(" ").map((wordItem, index) => (
-        <span key={index} className="inline-block whitespace-pre">
-          <motion.span variants={word} className="inline-block">
-            {wordItem}
-          </motion.span>
-          {index < text.split(" ").length - 1 ? "\u00A0" : ""}
-        </span>
-      ))}
+      {words.map((wordItem, index) => {
+        const clean = wordItem.replace(/[^\p{L}\p{N}]/gu, "").toLocaleLowerCase("pt-BR");
+        const highlighted = highlightWords?.some(
+          (highlight) => highlight.toLocaleLowerCase("pt-BR") === clean
+        );
+        return (
+          <span key={index} className="inline-block whitespace-pre">
+            <motion.span
+              variants={word}
+              className={cn("inline-block", highlighted && "text-gradient-gold")}
+            >
+              {wordItem}
+            </motion.span>
+            {index < words.length - 1 ? "\u00A0" : ""}
+          </span>
+        );
+      })}
     </MotionTag>
   );
 }
