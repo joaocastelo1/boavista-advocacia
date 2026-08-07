@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import Image from "next/image";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
@@ -13,25 +13,14 @@ import { galleryImages } from "@/constants/gallery";
 import { cn } from "@/lib/utils";
 import type { GalleryImage } from "@/types";
 
-function getSlidesToScroll() {
-  if (typeof window === "undefined") return 3;
-  if (window.innerWidth < 768) return 1;
-  if (window.innerWidth < 1024) return 2;
-  return 3;
-}
-
 export function Gallery() {
   const [selected, setSelected] = useState<GalleryImage | null>(null);
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [count, setCount] = useState(0);
 
-  const autoplayRef = useRef(
-    Autoplay({ delay: 4200, stopOnInteraction: false, stopOnMouseEnter: true })
-  );
-
   const [emblaRef, emblaApi] = useEmblaCarousel(
-    { loop: true, align: "start", containScroll: false, slidesToScroll: getSlidesToScroll() },
-    [autoplayRef.current]
+    { loop: true, align: "center", containScroll: false },
+    [Autoplay({ delay: 4500, stopOnInteraction: false, stopOnMouseEnter: true })]
   );
 
   useEffect(() => {
@@ -40,13 +29,8 @@ export function Gallery() {
     const onSelect = () => setSelectedIndex(emblaApi.selectedScrollSnap());
     emblaApi.on("select", onSelect);
     onSelect();
-    const onResize = () => {
-      emblaApi.reInit({ slidesToScroll: getSlidesToScroll() });
-    };
-    window.addEventListener("resize", onResize);
     return () => {
       emblaApi.off("select", onSelect);
-      window.removeEventListener("resize", onResize);
     };
   }, [emblaApi]);
 
@@ -63,53 +47,65 @@ export function Gallery() {
         />
 
         <Reveal delay={0.2}>
-          <div className="mt-16">
-            <div className="overflow-hidden" ref={emblaRef}>
+          <div className="relative mt-16">
+            <div
+              aria-hidden="true"
+              className="pointer-events-none absolute top-1/2 left-1/2 z-0 size-[420px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-gold-400/10 blur-[130px]"
+            />
+
+            <div className="relative z-10 -mx-4 overflow-hidden py-10 sm:-mx-6" ref={emblaRef}>
               <div className="flex touch-pan-y">
-                {galleryImages.map((image) => (
+                {galleryImages.map((image, index) => (
                   <div
                     key={image.src}
-                    className="min-w-0 shrink-0 grow-0 basis-full px-2 md:basis-1/2 lg:basis-1/3"
+                    className="min-w-0 shrink-0 grow-0 basis-[80%] pl-4 sm:basis-[56%] sm:pl-6 lg:basis-[40%]"
                   >
                     <button
                       type="button"
                       onClick={() => setSelected(image)}
                       aria-label={`Ampliar imagem: ${image.title}`}
-                      className="group relative block aspect-[3/4] w-full overflow-hidden rounded-2xl border border-border"
+                      className={cn(
+                        "group relative block w-full overflow-hidden rounded-2xl transition-all duration-500 ease-out",
+                        index === selectedIndex
+                          ? "z-10 scale-100 border border-gold-400/40 opacity-100 shadow-[0_25px_70px_-25px_rgba(0,0,0,0.7)]"
+                          : "scale-[0.88] border border-border opacity-40 blur-[1px]"
+                      )}
                     >
-                      <Image
-                        src={image.src}
-                        alt={image.alt}
-                        fill
-                        sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
-                        quality={88}
-                        className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
-                        loading="lazy"
-                      />
-                      <span
-                        aria-hidden="true"
-                        className="absolute inset-0 bg-gradient-to-t from-ink-950/80 via-ink-950/10 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100"
-                      />
-                      <span className="absolute inset-x-0 bottom-0 flex translate-y-3 items-center justify-between p-5 opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
-                        <span className="text-left">
-                          <span className="block font-display text-base font-semibold text-ivory-100">
-                            {image.title}
+                      <div className="relative aspect-[3/4]">
+                        <Image
+                          src={image.src}
+                          alt={image.alt}
+                          fill
+                          sizes="(min-width: 1024px) 40vw, (min-width: 768px) 56vw, 80vw"
+                          quality={88}
+                          className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+                          loading="lazy"
+                        />
+                        <span
+                          aria-hidden="true"
+                          className="absolute inset-0 bg-gradient-to-t from-ink-950/80 via-ink-950/10 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+                        />
+                        <span className="absolute inset-x-0 bottom-0 flex translate-y-3 items-center justify-between p-5 opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+                          <span className="text-left">
+                            <span className="block font-display text-base font-semibold text-ivory-100">
+                              {image.title}
+                            </span>
+                            <span className="block text-xs tracking-wide text-gold-400 uppercase">
+                              {image.category}
+                            </span>
                           </span>
-                          <span className="block text-xs tracking-wide text-gold-400 uppercase">
-                            {image.category}
+                          <span className="flex size-9 items-center justify-center rounded-full border border-gold-400/50 bg-ink-950/70 text-gold-400 backdrop-blur">
+                            <Expand className="size-4" aria-hidden="true" />
                           </span>
                         </span>
-                        <span className="flex size-9 items-center justify-center rounded-full border border-gold-400/50 bg-ink-950/70 text-gold-400 backdrop-blur">
-                          <Expand className="size-4" aria-hidden="true" />
-                        </span>
-                      </span>
+                      </div>
                     </button>
                   </div>
                 ))}
               </div>
             </div>
 
-            <div className="mt-8 flex items-center justify-center gap-6">
+            <div className="relative z-10 mt-2 flex items-center justify-center gap-6">
               <button
                 type="button"
                 onClick={scrollPrev}
