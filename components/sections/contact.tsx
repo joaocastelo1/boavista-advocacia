@@ -41,6 +41,7 @@ export function Contact() {
 
       <div className="container-max">
         <SectionHeading
+          align="left"
           eyebrow="Contato"
           title="Vamos conversar sobre o seu caso?"
           description="Preencha o formulário e retornaremos em até 1 hora útil. Ou, se preferir, fale agora pelo WhatsApp."

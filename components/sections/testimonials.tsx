@@ -45,6 +45,7 @@ export function Testimonials() {
 
       <div className="container-max">
         <SectionHeading
+          align="left"
           eyebrow="Depoimentos"
           title="Quem confiou, recomenda"
           description="A satisfação de quem atendemos é o nosso maior patrimônio. Veja o que dizem nossos clientes."

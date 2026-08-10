@@ -15,6 +15,7 @@ export function Diferenciais() {
 
       <div className="container-max">
         <SectionHeading
+          align="left"
           eyebrow="Por que nos escolher"
           title="Diferenciais que fazem a diferença no seu caso"
           description="Mais do que processos, construímos relações de confiança. Conheça o que torna nosso atendimento único."

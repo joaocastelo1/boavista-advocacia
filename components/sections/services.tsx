@@ -15,6 +15,7 @@ export function Services() {
 
       <div className="container-max">
         <SectionHeading
+          align="left"
           eyebrow="Serviços"
           title="Soluções jurídicas completas para cada necessidade"
           description="Da consultoria preventiva à atuação em tribunais superiores, oferecemos um leque completo de serviços jurídicos."

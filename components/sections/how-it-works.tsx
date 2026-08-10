@@ -16,6 +16,7 @@ export function HowItWorks() {
 
       <div className="container-max">
         <SectionHeading
+          align="left"
           eyebrow="Como Funciona"
           title="Um caminho claro e transparente até o resultado"
           description="Você acompanha cada etapa do seu caso. Processo simples, comunicação constante e nenhuma surpresa pelo caminho."

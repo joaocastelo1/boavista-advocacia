@@ -41,6 +41,7 @@ export function Gallery() {
     <section id="galeria" className="section-pad relative overflow-hidden bg-background">
       <div className="container-max">
         <SectionHeading
+          align="left"
           eyebrow="Galeria"
           title="Conheça o ambiente onde a justiça acontece"
           description="Estrutura, tecnologia e um time dedicado a construir o melhor resultado para o seu caso."
