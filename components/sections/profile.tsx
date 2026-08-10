@@ -89,9 +89,9 @@ export function Profile() {
           />
 
           <Reveal delay={0.15}>
-            <div className="mt-8 space-y-5 text-foreground/80 leading-relaxed">
+            <div className="mt-8 max-w-[70ch] space-y-5 text-foreground/80 leading-relaxed">
               {siteConfig.lawyer.bio.map((paragraph, index) => (
-                <p key={index} className="text-base md:text-lg">
+                <p key={index} className="text-base text-justify leading-relaxed md:text-lg">
                   {paragraph}
                 </p>
               ))}

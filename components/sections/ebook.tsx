@@ -48,7 +48,7 @@ export function Ebook() {
                 </Reveal>
 
                 <Reveal delay={0.2}>
-                  <p className="mt-4 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg">
+                  <p className="mt-4 max-w-xl text-base leading-relaxed text-justify text-muted-foreground md:text-lg">
                     {ebook.description}
                   </p>
                 </Reveal>
