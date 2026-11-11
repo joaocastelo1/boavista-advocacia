@@ -13,7 +13,7 @@ export function buildMetadata({
   title,
   description,
   path = "/",
-  image = "/images/og-cover.png",
+  image = "/images/og-whatsapp.png",
   baseUrl,
 }: MetadataProps = {}): Metadata {
   const resolvedTitle = title
@@ -46,7 +46,15 @@ export function buildMetadata({
       siteName: siteConfig.name,
       title: resolvedTitle,
       description: resolvedDescription,
-      images: [{ url: resolvedImage, width: 1200, height: 630, alt: siteConfig.name }],
+      images: [
+        {
+          url: resolvedImage,
+          width: 1200,
+          height: 630,
+          alt: siteConfig.name,
+          type: "image/png",
+        },
+      ],
     },
     twitter: {
       card: "summary_large_image",
