@@ -5,6 +5,7 @@ export const navigation: NavItem[] = [
   { label: "Sobre", href: "#sobre" },
   { label: "Áreas", href: "#areas" },
   { label: "Como Funciona", href: "#como-funciona" },
+  { label: "Galeria", href: "#galeria" },
   { label: "E-book", href: "#ebook" },
   { label: "Contato", href: "#contato" },
 ];

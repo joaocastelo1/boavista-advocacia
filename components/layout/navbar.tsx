@@ -5,9 +5,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Menu } from "lucide-react";
 
 import { Logo } from "@/components/layout/logo";
-import { ThemeToggle } from "@/components/layout/theme-toggle";
 import { MobileMenu } from "@/components/layout/mobile-menu";
-import { Magnetic } from "@/components/animations/magnetic";
 import { Button } from "@/components/ui/button";
 import { navigation } from "@/constants/navigation";
 import { useActiveSection } from "@/hooks/use-active-section";
@@ -59,13 +57,10 @@ export function Navbar() {
           </nav>
 
           <div className="flex items-center gap-3">
-            <ThemeToggle />
             <div className="hidden md:block">
-              <Magnetic>
-                <Button asChild size="lg" className="h-11">
-                  <a href="#contato">Agendar Consulta</a>
-                </Button>
-              </Magnetic>
+              <Button asChild size="lg" className="h-11">
+                <a href="#contato">Agendar Consulta</a>
+              </Button>
             </div>
             <button
               type="button"

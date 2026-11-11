@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { BadgeCheck, GraduationCap, Target, Gem, MessageCircle } from "lucide-react";
+import { Target, Gem, MessageCircle } from "lucide-react";
 
 import { Reveal } from "@/components/animations/reveal";
 import { SectionHeading } from "@/components/ui/section-heading";
@@ -121,39 +121,6 @@ export function Profile() {
               })}
             </div>
           </Reveal>
-
-          <div className="mt-12">
-            <Reveal>
-              <div className="flex items-center gap-3">
-                <GraduationCap className="size-5 text-gold-400" aria-hidden="true" />
-                <h3 className="font-display text-xl font-semibold">
-                  Formação Acadêmica
-                </h3>
-              </div>
-            </Reveal>
-
-            <ol className="relative mt-8 space-y-8 border-l border-gold-400/30 pl-8">
-              {siteConfig.lawyer.formation.map((item, index) => (
-                <li key={item} className="relative">
-                  <Reveal delay={index * 0.1}>
-                    <span
-                      aria-hidden="true"
-                      className="absolute -left-[41px] top-1 flex size-4 items-center justify-center rounded-full border border-gold-400 bg-background"
-                    >
-                      <span className="size-1.5 rounded-full bg-gold-400" />
-                    </span>
-                    <p className="flex items-start gap-2 text-foreground">
-                      <BadgeCheck
-                        className="mt-0.5 size-4 shrink-0 text-gold-400"
-                        aria-hidden="true"
-                      />
-                      <span className="font-medium">{item}</span>
-                    </p>
-                  </Reveal>
-                </li>
-              ))}
-            </ol>
-          </div>
 
           <div className="mt-12">
             <Reveal>

@@ -2,7 +2,6 @@ import Image from "next/image";
 import { ArrowRight, Brain, CheckCircle2, Globe2, HeartHandshake, Target } from "lucide-react";
 
 import { Reveal } from "@/components/animations/reveal";
-import { Parallax } from "@/components/animations/parallax";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { Button } from "@/components/ui/button";
 import { siteConfig } from "@/lib/site";
@@ -42,8 +41,7 @@ export function About() {
 
       <div className="container-max grid items-center gap-16 lg:grid-cols-2 lg:gap-20">
         <div className="relative">
-          <Parallax offset={40}>
-            <Reveal direction="right">
+          <Reveal direction="right">
               <div className="relative">
                 <div
                   aria-hidden="true"
@@ -55,8 +53,8 @@ export function About() {
                 />
                 <div className="relative overflow-hidden rounded-2xl border border-border shadow-card">
                   <Image
-                    src="/images/adv.jpg"
-                    alt="Foto do escritório Boavista Advocacia"
+                    src="/images/adv2.png"
+                    alt="Atendimento e acordo com clientes na Boavista Advocacia"
                     width={880}
                     height={1040}
                     className="h-[520px] w-full object-cover md:h-[620px]"
@@ -84,8 +82,7 @@ export function About() {
                   </div>
                 </div>
               </div>
-            </Reveal>
-          </Parallax>
+          </Reveal>
         </div>
 
         <div>

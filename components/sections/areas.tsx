@@ -43,7 +43,7 @@ export function Areas() {
           align="left"
           eyebrow="Áreas de Atuação"
           title="Especialidades jurídicas de alto padrão"
-          titleClassName="text-2xl sm:text-3xl md:text-4xl lg:text-[2.35rem] sm:whitespace-nowrap"
+          titleClassName="text-2xl sm:text-3xl md:text-4xl lg:text-[2.35rem]"
           description="Atuação completa nas áreas do direito que mais impactam pessoas e empresas, sempre com estratégia, técnica e dedicação."
         />
 

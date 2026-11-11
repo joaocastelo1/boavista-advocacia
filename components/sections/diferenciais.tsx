@@ -43,14 +43,6 @@ export function Diferenciais() {
             );
           })}
 
-          <Reveal delay={0.3}>
-            <article className="relative flex h-full flex-col items-center justify-center overflow-hidden rounded-2xl border border-gold-400/40 bg-gradient-to-br from-gold-400/15 via-gold-400/5 to-transparent p-6 text-center">
-              <p className="font-cinzel text-4xl font-semibold text-gold-400">100%</p>
-              <p className="mt-2 max-w-[220px] text-sm leading-relaxed text-foreground/80">
-                dos atendimentos conduzidos com compromisso e responsabilidade
-              </p>
-            </article>
-          </Reveal>
         </div>
       </div>
     </section>

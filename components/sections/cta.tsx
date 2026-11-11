@@ -1,7 +1,6 @@
 import { MessageCircle, PhoneCall } from "lucide-react";
 
 import { Reveal } from "@/components/animations/reveal";
-import { Magnetic } from "@/components/animations/magnetic";
 import { Button } from "@/components/ui/button";
 import { siteConfig } from "@/lib/site";
 
@@ -40,19 +39,17 @@ export function Cta() {
               </p>
 
               <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
-                <Magnetic strength={0.2}>
-                  <Button
-                    asChild
-                    size="lg"
-                    variant="secondary"
-                    className="bg-ink-950 text-ivory-100 shadow-2xl hover:bg-ink-800"
-                  >
-                    <a href={siteConfig.whatsappUrl} target="_blank" rel="noopener noreferrer">
-                      <MessageCircle />
-                      Falar pelo WhatsApp
-                    </a>
-                  </Button>
-                </Magnetic>
+                <Button
+                  asChild
+                  size="lg"
+                  variant="secondary"
+                  className="bg-ink-950 text-ivory-100 shadow-2xl hover:bg-ink-800"
+                >
+                  <a href={siteConfig.whatsappUrl} target="_blank" rel="noopener noreferrer">
+                    <MessageCircle />
+                    Falar pelo WhatsApp
+                  </a>
+                </Button>
                 <Button
                   asChild
                   size="lg"

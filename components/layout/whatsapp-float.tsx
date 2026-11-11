@@ -27,10 +27,6 @@ export function WhatsAppFloat() {
         aria-label="Falar com um advogado pelo WhatsApp"
         className="group relative flex size-14 items-center justify-center rounded-full bg-[#25D366] text-ink-950 shadow-[0_12px_36px_-8px_rgba(37,211,102,0.7)] transition-transform hover:scale-110 md:size-16"
       >
-        <span
-          aria-hidden="true"
-          className="absolute inset-0 animate-pulse-ring rounded-full bg-[#25D366]"
-        />
         <MessageCircle className="relative size-6 md:size-7" />
         <span className="pointer-events-none absolute top-1/2 right-full mr-3 -translate-y-1/2 rounded-lg bg-ink-900 px-3 py-1.5 text-xs font-medium whitespace-nowrap text-ivory-100 opacity-0 shadow-xl transition-opacity group-hover:opacity-100">
           Fale com um advogado

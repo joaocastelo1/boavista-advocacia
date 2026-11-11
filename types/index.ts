@@ -19,13 +19,6 @@ export type Area = {
   icon: LucideIcon;
 };
 
-export type Service = {
-  title: string;
-  description: string;
-  icon: LucideIcon;
-  features: string[];
-};
-
 export type Differencial = {
   title: string;
   description: string;

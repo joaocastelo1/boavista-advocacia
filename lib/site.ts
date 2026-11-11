@@ -7,7 +7,7 @@ export const siteConfig = {
   legalName: "Boavista Advocacia – Escritório de Advocacia",
   tagline: "Guiado por princípios de zelo, excelência e integridade.",
   description:
-    "O Boavista Advocacia preza pela satisfação máxima de seus clientes, com atendimento jurídico especializado nas áreas cível, previdenciária e do consumidor, em todo o Brasil.",
+    "Advocacia em Codó (MA) com atendimento presencial e online em todo o Brasil. Atuação estratégica em Direito Civil, Previdenciário, do Consumidor e Imobiliário, com ética, transparência e foco em resultados.",
   keywords: [
     "advocacia",
     "advogado",
@@ -33,13 +33,13 @@ export const siteConfig = {
   email: process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "bruno@boavistaadvocacia.com.br",
 
   address: {
-    street: "Avenida Duque de Caxias, 2620 A",
-    district: "Bairro São Sebastião",
+    street: "Rua Cônego Medonça, 352",
+    district: "Girassol Center I – Box 16",
     city: "Codó",
     state: "MA",
     zip: "65400-000",
-    full: "Avenida Duque de Caxias, 2620 A – Bairro São Sebastião, Codó – MA",
-    mapsQuery: "Avenida Duque de Caxias, 2620 A, Codó - MA",
+    full: "Rua Cônego Medonça, 352 | Girassol Center I – Box 16 | Centro – Codó (MA)",
+    mapsQuery: "Rua Cônego Medonça, 352, Girassol Center I, Box 16, Centro, Codó - MA",
   },
 
   social: {
@@ -86,7 +86,7 @@ export const siteConfig = {
     oab: "OAB/MA 26531",
     email: "bruno@boavistaadvocacia.com.br",
     phone: "(99) 98259-7369",
-    photo: "/images/adv principal.png",
+    photo: "/images/adv-principal.png",
     specialities: [
       "Direito Civil",
       "Direito Previdenciário",
@@ -97,7 +97,6 @@ export const siteConfig = {
       "Advogado dedicado, Bruno Boavista Castelo Branco une inteligência jurídica, ousadia estratégica e um atendimento próximo, claro e transparente com cada cliente.",
       "Guiado por princípios de zelo, excelência e integridade, o Boavista Advocacia preza pela satisfação máxima de seus clientes, atuando de forma consultiva e contenciosa em todo o Brasil.",
     ],
-    formation: ["Graduação em Direito"],
   },
 
   whatsappMessage:

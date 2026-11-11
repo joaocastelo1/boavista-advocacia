@@ -1,7 +1,6 @@
 import { BookOpen, Check, FileText, ShoppingCart } from "lucide-react";
 
 import { Reveal } from "@/components/animations/reveal";
-import { Magnetic } from "@/components/animations/magnetic";
 import { Button } from "@/components/ui/button";
 import { EbookCover } from "./ebook/ebook-cover";
 import { siteConfig } from "@/lib/site";
@@ -83,14 +82,12 @@ export function Ebook() {
                         {ebook.price}
                       </p>
                     </div>
-                    <Magnetic strength={0.2}>
-                      <Button asChild size="lg" className="w-full sm:w-auto">
-                        <a href={ebook.buyUrl} target="_blank" rel="noopener noreferrer">
-                          <ShoppingCart />
-                          Comprar e-book
-                        </a>
-                      </Button>
-                    </Magnetic>
+                    <Button asChild size="lg" className="w-full sm:w-auto">
+                      <a href={ebook.buyUrl} target="_blank" rel="noopener noreferrer">
+                        <ShoppingCart />
+                        Comprar e-book
+                      </a>
+                    </Button>
                   </div>
                 </Reveal>
               </div>

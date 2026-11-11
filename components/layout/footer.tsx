@@ -1,14 +1,5 @@
 import Image from "next/image";
-import {
-  Facebook,
-  Instagram,
-  Youtube,
-  Mail,
-  MapPin,
-  Phone,
-  Clock,
-  MessageCircle,
-} from "lucide-react";
+import { Facebook, Instagram, Youtube, Mail, MapPin, Phone, Clock } from "lucide-react";
 
 import { Separator } from "@/components/ui/separator";
 import { navigation } from "@/constants/navigation";
@@ -21,10 +12,6 @@ const socialLinks = [
   { label: "Facebook", href: siteConfig.social.facebook, icon: Facebook },
 ];
 
-const whatsappShareUrl = `https://wa.me/?text=${encodeURIComponent(
-  `Boavista Advocacia — Bruno Boavista Castelo Branco, advogado em Codó (MA). Confira: ${siteConfig.url}`
-)}`;
-
 export function Footer() {
   return (
     <footer className="relative border-t border-white/[0.06] bg-ink-950 text-ivory-100">
@@ -36,10 +23,8 @@ export function Footer() {
       <div className="container-max grid gap-12 py-16 md:grid-cols-2 md:py-20 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
         <div>
           <a
-            href={whatsappShareUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Compartilhar Boavista Advocacia no WhatsApp"
+            href="#home"
+            aria-label="Boavista Advocacia — Voltar ao início"
             className="inline-block transition-opacity duration-300 hover:opacity-85"
           >
             <Image
@@ -54,15 +39,6 @@ export function Footer() {
             Advocacia dedicada a proteger seus direitos com ética, estratégia, inteligência e
             resultados em todo o Brasil.
           </p>
-          <a
-            href={whatsappShareUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-4 inline-flex items-center gap-2 rounded-lg border border-[#25D366]/40 bg-[#25D366]/10 px-4 py-2 text-xs font-medium text-[#25D366] transition-colors hover:bg-[#25D366] hover:text-ink-950"
-          >
-            <MessageCircle className="size-4" aria-hidden="true" />
-            Compartilhar no WhatsApp
-          </a>
           <div className="mt-6 flex items-center gap-3">
             {socialLinks.map(({ label, href, icon: Icon }) => (
               <a
