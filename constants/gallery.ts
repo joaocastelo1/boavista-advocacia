@@ -2,18 +2,6 @@ import type { GalleryImage } from "@/types";
 
 export const galleryImages: GalleryImage[] = [
   {
-    src: "/images/foto1.png",
-    alt: "Advogado Bruno Boavista trabalhando em sua mesa no escritório",
-    title: "Atendimento no Escritório",
-    category: "Atendimento",
-  },
-  {
-    src: "/images/foto2.jpeg",
-    alt: "Bruno Boavista com seu filho no escritório da Boavista Advocacia",
-    title: "Atendimento Humanizado",
-    category: "Atendimento",
-  },
-  {
     src: "/images/foto3.jpeg",
     alt: "Bruno Boavista em reunião com cliente durante atendimento",
     title: "Reunião com Cliente",
